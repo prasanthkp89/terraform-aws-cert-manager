@@ -18,6 +18,7 @@ resource "aws_route53_record" "cert_validation" {
 }
 
 data "aws_route53_zone" "domain_zone" {
+  count   = "${var.create_entry_for_domain ? 1 : 0}"
   name         = "${var.domain_name}."
   private_zone = false
 }
