@@ -1,9 +1,6 @@
 variable "domain_name" {
   default = "example.com"
 }
-variable "aws_region" {
-  default = "eu-west-1"
-}
 
 variable "subject_alternative_names" {
   type = "list"
